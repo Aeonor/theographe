@@ -1,0 +1,47 @@
+*{margin: 0; padding: 0}
+
+body {
+  background: @body_color;
+  overflow: hidden;
+}
+
+#homenav {
+  margin:auto;
+  ul{
+    list-style: none;
+    font-size: 0;
+    li {
+      position: relative;
+      display: inline-block;
+      width: 25%;
+      height: 100%;
+      font-size: 13px;
+      overflow: hidden;
+      a {
+        opacity: .5;
+        .transition();
+        &:hover {
+          opacity: .9;
+        }
+        img {
+          height: 100%;
+        }
+        span {
+          position: absolute;
+          display: block;
+          opacity: 0;
+          top: 50%;
+          margin-top: -23px;
+          right: 20px;
+          font: 25px Georgia;
+          color: #fff;
+          .transition();
+          text-shadow: 1px 1px 1px #000;
+        }
+        &:hover span {
+          opacity: .99;
+        }
+      }
+    }
+  }
+}
