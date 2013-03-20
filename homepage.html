@@ -28,15 +28,15 @@
           </a>
         </li>
         <li>
-          <a href="/travaux/" class="travaux">
-            <img src="images/home/travaux.jpg" alt="01" />
-            <span>Travaux</span>
-          </a>
-        </li>
-        <li>
           <a href="/ceremonies/" class="ceremonies">
             <img src="images/home/ceremonies.jpg" alt="01" />
             <span>Cérémonies</span>
+          </a>
+        </li>
+        <li>
+          <a href="/travaux/" class="travaux">
+            <img src="images/home/travaux.jpg" alt="01" />
+            <span>Travaux</span>
           </a>
         </li>
       </ul>
@@ -44,5 +44,24 @@
   </div>
    
   <!-- javascripts -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('html').addClass('js');
+      $('#home-navigation a').hover(function() {
+           $('#home-navigation a').not($(this)).stop().animate({
+             opacity: .3
+           });
+           $(this).stop().animate({
+             opacity: 1
+           });
+        },function() {
+           $('#home-navigation a').stop().animate({
+             opacity: .8
+           });
+        }
+      );
+    });
+  </script>
 </body>
 </html>
